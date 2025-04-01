@@ -22,7 +22,7 @@ def ping_target():
 
 # Set up the scheduler to run the ping_target function every 20 minutes.
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=ping_target, trigger="interval", minutes=3)
+scheduler.add_job(func=ping_target, trigger="interval", minutes=1)
 scheduler.start()
 
 @app.route("/")
